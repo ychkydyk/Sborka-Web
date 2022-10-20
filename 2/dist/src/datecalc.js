@@ -1,0 +1,1 @@
+import{DateTime}from"luxon";export function diffDates(n,t){return(n=DateTime.fromISO(n))>(t=DateTime.fromISO(t))&&(t=[n,n=t][0]),t.diff(n,["years","months","days"]).toObject()}export const diffToHtml=n=>` \n    <span> \n        ${n.years?"Лет: "+n.years:""}\n        ${n.months?"Месяцев: "+n.months:""} \n        ${n.days?"Дней: "+n.days:""} \n    </span> \n`;
