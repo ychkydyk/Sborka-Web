@@ -19,15 +19,16 @@ module.exports= {
         new CopyPlugin({
             patterns: [
               {
-                from: "src/sound",
-                to: "src/sound",
+                from: "src/",
+                to: "src/",
                 toType: "dir",
               },
             ],
           }),
         new HtmlWebpackPlugin({
             template: resolve(__dirname, 'index.html')
-        })
+        }),
+        
     ],
     module: { 
         rules: [
